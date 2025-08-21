@@ -19,10 +19,13 @@ import {
   Plus,
   FileText,
   User,
+  Star,
+  Paperclip,
 } from 'lucide-react';
 import { AIAssistant } from '@/components/ai/ai-assistant';
 import { useProjects, useNotes } from '@/hooks/use-api';
 import { useRealTimeProjects, useRealTimeNotes } from '@/hooks/use-socket';
+import { useMail, useMailStats } from '@/hooks/use-mail';
 import { useSession } from 'next-auth/react';
 
 export default function Dashboard() {
@@ -31,38 +34,40 @@ export default function Dashboard() {
   const { data: notes, loading: notesLoading } = useNotes();
   const { projectUpdates } = useRealTimeProjects();
   const { noteUpdates } = useRealTimeNotes();
+  const { mails, loading: mailsLoading } = useMail({ folder: 'inbox', limit: 5 });
+  const { stats: mailStats, loading: mailStatsLoading } = useMailStats();
 
   // Calculate stats from real data
   const stats = [
+    {
+      title: 'Inbox',
+      value: mailStats?.counts?.unread || 0,
+      change: `+${mailStats?.counts?.recent || 0}`,
+      icon: Mail,
+      color: 'text-blue-600',
+      bgColor: 'bg-blue-50',
+    },
     {
       title: 'Active Projects',
       value: projects?.projects?.filter(p => p.status === 'active').length || 0,
       change: '+1',
       icon: FileText,
-      color: 'text-blue-600',
-      bgColor: 'bg-blue-50',
+      color: 'text-green-600',
+      bgColor: 'bg-green-50',
     },
     {
       title: 'Total Notes',
       value: notes?.notes?.length || 0,
       change: '+3',
       icon: MessageSquare,
-      color: 'text-green-600',
-      bgColor: 'bg-green-50',
+      color: 'text-purple-600',
+      bgColor: 'bg-purple-50',
     },
     {
       title: 'Storage Used',
       value: '7.2GB',
       change: '48%',
       icon: HardDrive,
-      color: 'text-purple-600',
-      bgColor: 'bg-purple-50',
-    },
-    {
-      title: 'Team Members',
-      value: '1',
-      change: '0',
-      icon: Users,
       color: 'text-red-600',
       bgColor: 'bg-red-50',
     },
@@ -70,6 +75,13 @@ export default function Dashboard() {
 
   // Generate recent activities from real data
   const recentActivities = [
+    ...(mails?.slice(0, 2).map(mail => ({
+      type: 'mail',
+      title: `Email: ${mail.subject}`,
+      description: `From ${mail.fromName || mail.from}`,
+      time: 'Just now',
+      status: mail.read ? 'read' : 'unread',
+    })) || []),
     ...(projects?.projects?.slice(0, 2).map(project => ({
       type: 'project',
       title: `Project: ${project.title}`,
@@ -102,32 +114,32 @@ export default function Dashboard() {
 
   const quickActions = [
     {
+      title: 'Compose Email',
+      description: 'Write a new email',
+      icon: Mail,
+      color: 'bg-blue-600',
+      href: '/inbox?compose=true',
+    },
+    {
       title: 'Create Project',
       description: 'Start a new project',
       icon: Plus,
-      color: 'bg-blue-600',
+      color: 'bg-green-600',
       href: '/projects?create=true',
     },
     {
       title: 'Create Note',
       description: 'Write a new note',
       icon: FileText,
-      color: 'bg-green-600',
+      color: 'bg-purple-600',
       href: '/notes?create=true',
     },
     {
-      title: 'View Projects',
-      description: 'Manage your projects',
-      icon: FileText,
-      color: 'bg-purple-600',
-      href: '/projects',
-    },
-    {
-      title: 'View Notes',
-      description: 'Browse your notes',
+      title: 'Check Inbox',
+      description: 'View your emails',
       icon: MessageSquare,
       color: 'bg-red-600',
-      href: '/notes',
+      href: '/inbox',
     },
   ];
 
@@ -218,11 +230,14 @@ export default function Dashboard() {
                 recentActivities.map((activity, index) => (
                   <div key={index} className="flex items-start gap-3">
                     <div className="mt-1">
+                      {activity.type === 'mail' && (
+                        <Mail className="h-4 w-4 text-blue-600" />
+                      )}
                       {activity.type === 'project' && (
-                        <FileText className="h-4 w-4 text-blue-600" />
+                        <FileText className="h-4 w-4 text-green-600" />
                       )}
                       {activity.type === 'note' && (
-                        <MessageSquare className="h-4 w-4 text-green-600" />
+                        <MessageSquare className="h-4 w-4 text-purple-600" />
                       )}
                       {activity.type === 'project_update' && (
                         <CheckCircle className="h-4 w-4 text-purple-600" />
@@ -265,8 +280,8 @@ export default function Dashboard() {
         </Card>
       </div>
 
-      {/* Recent Projects and Notes */}
-      <div className="grid gap-6 lg:grid-cols-2">
+      {/* Recent Projects, Notes, and Emails */}
+      <div className="grid gap-6 lg:grid-cols-3">
         {/* Recent Projects */}
         <Card>
           <CardHeader>
@@ -357,6 +372,58 @@ export default function Dashboard() {
             </div>
           </CardContent>
         </Card>
+
+        {/* Recent Emails */}
+        <Card>
+          <CardHeader>
+            <CardTitle>Recent Emails</CardTitle>
+            <CardDescription>
+              Your latest emails
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-3">
+              {mailsLoading ? (
+                <div className="text-center py-4">
+                  <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-primary mx-auto"></div>
+                  <p className="text-sm text-muted-foreground mt-2">Loading emails...</p>
+                </div>
+              ) : mails && mails.length > 0 ? (
+                mails.slice(0, 3).map((mail) => (
+                  <div key={mail.id} className="flex items-center justify-between p-3 border rounded-lg">
+                    <div className="flex-1">
+                      <h4 className="font-medium text-sm">{mail.subject}</h4>
+                      <p className="text-xs text-muted-foreground">
+                        From: {mail.fromName || mail.from}
+                      </p>
+                      <div className="flex items-center gap-2 mt-1">
+                        {!mail.read && (
+                          <Badge variant="default" className="text-xs">
+                            New
+                          </Badge>
+                        )}
+                        {mail.starred && (
+                          <Star className="h-3 w-3 fill-yellow-400 text-yellow-400" />
+                        )}
+                        {mail.hasAttachments && (
+                          <Paperclip className="h-3 w-3 text-muted-foreground" />
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                ))
+              ) : (
+                <div className="text-center py-4">
+                  <Mail className="h-8 w-8 text-muted-foreground mx-auto mb-2" />
+                  <p className="text-sm text-muted-foreground">No emails yet</p>
+                  <Button size="sm" className="mt-2" href="/inbox?compose=true">
+                    Compose Email
+                  </Button>
+                </div>
+              )}
+            </div>
+          </CardContent>
+        </Card>
       </div>
 
       {/* AI Assistant Section */}
@@ -380,7 +447,7 @@ export default function Dashboard() {
               <Progress value={48} className="h-2" />
             </div>
             
-            <div className="grid gap-4 md:grid-cols-3">
+            <div className="grid gap-4 md:grid-cols-4">
               <div className="space-y-2">
                 <div className="flex justify-between text-sm">
                   <span className="text-muted-foreground">Projects</span>
@@ -394,6 +461,13 @@ export default function Dashboard() {
                   <span className="font-medium">{userNotes.length} items</span>
                 </div>
                 <Progress value={Math.min((userNotes.length / 100) * 100, 100)} className="h-1" />
+              </div>
+              <div className="space-y-2">
+                <div className="flex justify-between text-sm">
+                  <span className="text-muted-foreground">Emails</span>
+                  <span className="font-medium">{mailStats?.storage?.estimatedMails || 0}</span>
+                </div>
+                <Progress value={Math.min(((mailStats?.storage?.estimatedMails || 0) / 1000) * 100, 100)} className="h-1" />
               </div>
               <div className="space-y-2">
                 <div className="flex justify-between text-sm">

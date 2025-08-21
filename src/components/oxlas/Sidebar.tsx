@@ -58,10 +58,16 @@ const navigation = [
     color: 'text-red-600',
   },
   {
-    name: 'Team',
-    href: '/team',
+    name: 'Teams',
+    href: '/teams',
     icon: Users,
     color: 'text-orange-600',
+  },
+  {
+    name: 'Tasks',
+    href: '/tasks',
+    icon: Clipboard,
+    color: 'text-yellow-600',
   },
   {
     name: 'Docs',

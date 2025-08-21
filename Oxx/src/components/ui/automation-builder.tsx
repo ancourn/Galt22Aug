@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import { useState } from "react"
-import { Plus, Trash2, Save, Play, Settings, Zap, Clock, Webhook, FileText, MessageSquare, Ticket, BookOpen, Form as FormIcon, Note } from "lucide-react"
+import { Plus, Trash2, Save, Play, Settings, Zap, Clock, Webhook, FileText, MessageSquare, Ticket, BookOpen, Square, File } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -37,7 +37,7 @@ const triggerTypes = [
     value: "formbricks_score",
     label: "Formbricks Score",
     description: "When survey score is below threshold",
-    icon: FormIcon,
+    icon: Square,
     fields: [
       { name: "surveyId", label: "Survey ID", type: "text" },
       { name: "threshold", label: "Score Threshold", type: "number" }
@@ -120,7 +120,7 @@ const actionTypes = [
     value: "joplin_create_note",
     label: "Create Joplin Note",
     description: "Create a note",
-    icon: Note,
+    icon: File,
     fields: [
       { name: "title", label: "Note Title", type: "text" },
       { name: "content", label: "Content", type: "textarea" },

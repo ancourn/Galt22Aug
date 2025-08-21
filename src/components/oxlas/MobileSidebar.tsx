@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { X, Home, Inbox, Calendar, HardDrive, Video, Users, FileText, Bot, FolderOpen, Heart, BookOpen, MessageSquare, File as FormIcon, Notebook, Brain, Zap, Settings } from 'lucide-react';
+import { X, Home, Inbox, Calendar, HardDrive, Video, Users, FileText, Bot, FolderOpen, Heart, BookOpen, MessageSquare, File as FormIcon, Notebook, Brain, Zap, Settings, Clipboard } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
@@ -46,10 +46,16 @@ export default function MobileSidebar({ isOpen, onClose, currentPath = '/' }: Mo
       current: currentPath === '/meet',
     },
     {
-      name: 'Team',
-      href: '/team',
+      name: 'Teams',
+      href: '/teams',
       icon: Users,
-      current: currentPath === '/team',
+      current: currentPath === '/teams',
+    },
+    {
+      name: 'Tasks',
+      href: '/tasks',
+      icon: Clipboard,
+      current: currentPath === '/tasks',
     },
     {
       name: 'Docs',

@@ -460,6 +460,128 @@ async function main() {
 
   console.log('✅ Automations created');
 
+  // Create sample emails for developer user
+  const developerEmails = [
+    {
+      from: 'sarah.johnson@company.com',
+      fromName: 'Sarah Johnson',
+      to: developerUser.email,
+      subject: 'Project Update - Q4 Review',
+      content: '<p>Hi team,</p><p>I wanted to share the latest project updates and discuss our Q4 review meeting. We\'ve made significant progress on several key initiatives.</p><p>Key accomplishments:</p><ul><li>Completed the website redesign phase 1</li><li>Launched the new mobile app beta</li><li>Improved system performance by 40%</li></ul><p>Let\'s schedule a meeting to review the detailed metrics.</p><p>Best regards,<br>Sarah</p>',
+      textContent: 'Hi team,\n\nI wanted to share the latest project updates and discuss our Q4 review meeting. We\'ve made significant progress on several key initiatives.\n\nKey accomplishments:\n- Completed the website redesign phase 1\n- Launched the new mobile app beta\n- Improved system performance by 40%\n\nLet\'s schedule a meeting to review the detailed metrics.\n\nBest regards,\nSarah',
+      status: 'inbox',
+      folder: 'inbox',
+      read: false,
+      starred: false,
+      hasAttachments: true,
+      attachments: JSON.stringify([
+        {
+          filename: 'q4-report.pdf',
+          originalName: 'Q4_Report_2024.pdf',
+          fileSize: 2048576,
+          mimeType: 'application/pdf',
+          filePath: '/attachments/q4-report.pdf'
+        }
+      ]),
+    },
+    {
+      from: 'michael.chen@techcorp.io',
+      fromName: 'Michael Chen',
+      to: developerUser.email,
+      subject: 'Meeting Request: Product Demo',
+      content: '<p>Hi there,</p><p>Would you be available next week for a product demo? We have some exciting new features to showcase that I think would be perfect for your team.</p><p>The demo will cover:</p><ul><li>New AI-powered analytics dashboard</li><li>Real-time collaboration features</li><li>Enhanced security measures</li></ul><p>Please let me know what time works best for you.</p><p>Best,<br>Michael</p>',
+      textContent: 'Hi there,\n\nWould you be available next week for a product demo? We have some exciting new features to showcase that I think would be perfect for your team.\n\nThe demo will cover:\n- New AI-powered analytics dashboard\n- Real-time collaboration features\n- Enhanced security measures\n\nPlease let me know what time works best for you.\n\nBest,\nMichael',
+      status: 'inbox',
+      folder: 'inbox',
+      read: true,
+      starred: true,
+      hasAttachments: false,
+    },
+    {
+      from: 'emily.rodriguez@designstudio.com',
+      fromName: 'Emily Rodriguez',
+      to: developerUser.email,
+      subject: 'Design Assets Ready for Review',
+      content: '<p>Hello!</p><p>The design assets are ready for your review. Please check the attached files and let me know your thoughts.</p><p>I\'ve included:</p><ul><li>Logo variations</li><li>Color palette</li><li>Typography guidelines</li><li>UI components</li></ul><p>Looking forward to your feedback!</p><p>Cheers,<br>Emily</p>',
+      textContent: 'Hello!\n\nThe design assets are ready for your review. Please check the attached files and let me know your thoughts.\n\nI\'ve included:\n- Logo variations\n- Color palette\n- Typography guidelines\n- UI components\n\nLooking forward to your feedback!\n\nCheers,\nEmily',
+      status: 'inbox',
+      folder: 'inbox',
+      read: false,
+      starred: false,
+      hasAttachments: true,
+      attachments: JSON.stringify([
+        {
+          filename: 'design-assets.zip',
+          originalName: 'Design_Assets_Final.zip',
+          fileSize: 10485760,
+          mimeType: 'application/zip',
+          filePath: '/attachments/design-assets.zip'
+        }
+      ]),
+    }
+  ];
+
+  for (const email of developerEmails) {
+    await prisma.mail.create({
+      data: {
+        ...email,
+        userId: developerUser.id,
+        messageId: `<${Date.now() + Math.random()}@localhost>`,
+      }
+    });
+  }
+
+  // Create sample emails for demo user
+  const demoEmails = [
+    {
+      from: 'david.kim@partners.com',
+      fromName: 'David Kim',
+      to: demoUser.email,
+      subject: 'Partnership Opportunity',
+      content: '<p>Dear team,</p><p>I wanted to discuss a potential partnership opportunity between our companies. Our platform could complement your existing services perfectly.</p><p>Key benefits of this partnership:</p><ul><li>Expanded service offerings</li><li>Shared customer base</li><li>Revenue sharing opportunities</li></ul><p>Would you be open to a brief call next week to explore this further?</p><p>Best regards,<br>David</p>',
+      textContent: 'Dear team,\n\nI wanted to discuss a potential partnership opportunity between our companies. Our platform could complement your existing services perfectly.\n\nKey benefits of this partnership:\n- Expanded service offerings\n- Shared customer base\n- Revenue sharing opportunities\n\nWould you be open to a brief call next week to explore this further?\n\nBest regards,\nDavid',
+      status: 'inbox',
+      folder: 'inbox',
+      read: true,
+      starred: false,
+      hasAttachments: false,
+    },
+    {
+      from: 'lisa.thompson@marketing.com',
+      fromName: 'Lisa Thompson',
+      to: demoUser.email,
+      subject: 'Campaign Performance Report',
+      content: '<p>Hi team,</p><p>Here is the monthly campaign performance report with detailed analytics and insights.</p><p>Key metrics:</p><ul><li>Click-through rate: 3.2% (up from 2.8%)</li><li>Conversion rate: 1.8% (up from 1.5%)</li><li>Cost per acquisition: $45 (down from $52)</li><li>ROI: 245% (up from 210%)</li></ul><p>The campaign is performing well above expectations. Great work everyone!</p><p>Best,<br>Lisa</p>',
+      textContent: 'Hi team,\n\nHere is the monthly campaign performance report with detailed analytics and insights.\n\nKey metrics:\n- Click-through rate: 3.2% (up from 2.8%)\n- Conversion rate: 1.8% (up from 1.5%)\n- Cost per acquisition: $45 (down from $52)\n- ROI: 245% (up from 210%)\n\nThe campaign is performing well above expectations. Great work everyone!\n\nBest,\nLisa',
+      status: 'inbox',
+      folder: 'inbox',
+      read: true,
+      starred: true,
+      hasAttachments: true,
+      attachments: JSON.stringify([
+        {
+          filename: 'campaign-report.xlsx',
+          originalName: 'Monthly_Campaign_Report.xlsx',
+          fileSize: 512000,
+          mimeType: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+          filePath: '/attachments/campaign-report.xlsx'
+        }
+      ]),
+    }
+  ];
+
+  for (const email of demoEmails) {
+    await prisma.mail.create({
+      data: {
+        ...email,
+        userId: demoUser.id,
+        messageId: `<${Date.now() + Math.random()}@localhost>`,
+      }
+    });
+  }
+
+  console.log('✅ Emails created');
+
   console.log('🎉 Database seeding completed!');
   console.log('📊 Summary:');
   console.log(`   - Users: 2`);
@@ -469,6 +591,7 @@ async function main() {
   console.log(`   - Knowledge Edges: 2`);
   console.log(`   - Search Documents: 3`);
   console.log(`   - Automations: 2`);
+  console.log(`   - Emails: 5`);
 }
 
 main()
