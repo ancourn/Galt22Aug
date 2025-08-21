@@ -27,6 +27,7 @@ import {
   Clipboard,
   Brain,
   FileEdit,
+  BarChart3,
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -68,6 +69,12 @@ const navigation = [
     href: '/tasks',
     icon: Clipboard,
     color: 'text-yellow-600',
+  },
+  {
+    name: 'Analytics',
+    href: '/analytics',
+    icon: BarChart3,
+    color: 'text-indigo-600',
   },
   {
     name: 'Docs',

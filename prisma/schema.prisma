@@ -115,6 +115,11 @@ model User {
   reportedTasks Task[]     @relation("TaskReporter")
   taskComments  TaskComment[]
   timeEntries   TimeEntry[]
+  dashboardWidgets DashboardWidget[]
+  reports       Report[]
+  activities    UserActivity[] @relation("UserActivities")
+  performanceMetrics PerformanceMetric[]
+  documents     Document[]
   
   @@index([role])
 }
@@ -136,6 +141,8 @@ model Project {
   user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
   team        Team?    @relation(fields: [teamId], references: [id], onDelete: SetNull)
   tasks       Task[]
+  performanceMetrics PerformanceMetric[]
+  documents   Document[]
   
   @@index([userId])
   @@index([teamId])
@@ -233,6 +240,8 @@ model Team {
   members     TeamMember[]
   projects    Project[]
   tasks       Task[]
+  performanceMetrics PerformanceMetric[]
+  documents   Document[]
   
   @@index([ownerId])
 }
@@ -284,6 +293,8 @@ model Task {
   comments    TaskComment[]
   timeEntries TimeEntry[]
   attachments TaskAttachment[]
+  performanceMetrics PerformanceMetric[]
+  documents   Document[]
   
   @@index([projectId])
   @@index([teamId])
@@ -350,6 +361,141 @@ model TaskAttachment {
   @@index([taskId])
 }
 
+// Analytics and Metrics
+model AnalyticsMetric {
+  id          String   @id @default(cuid())
+  type        String   // "task_completion", "team_productivity", "project_progress", "user_activity"
+  entityId    String   // ID of the related entity (task, team, project, user)
+  entityType  String   // "task", "team", "project", "user"
+  metricName  String   // Specific metric name
+  value       Float    // Metric value
+  unit        String?  // Unit of measurement (hours, count, percentage, etc.)
+  period      String   // "daily", "weekly", "monthly", "yearly"
+  date        DateTime // Date for this metric
+  metadata    Json?    // Additional metric data
+  createdAt   DateTime @default(now())
+  
+  @@index([type, entityType])
+  @@index([entityId, entityType])
+  @@index([period, date])
+  @@index([metricName])
+}
+
+model DashboardWidget {
+  id          String   @id @default(cuid())
+  userId      String
+  name        String
+  type        String   // "chart", "metric", "table", "list"
+  widgetType  String   // "line_chart", "bar_chart", "pie_chart", "metric_card", "data_table", "activity_list"
+  title       String
+  description String?
+  config      Json     // Widget configuration (filters, chart settings, etc.)
+  position    Int      // Widget position on dashboard
+  isVisible   Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  // Relations
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  @@index([userId])
+  @@index([type, widgetType])
+}
+
+model Report {
+  id          String   @id @default(cuid())
+  userId      String
+  name        String
+  description String?
+  type        String   // "team_performance", "project_summary", "productivity", "custom"
+  config      Json     // Report configuration (filters, metrics, time range)
+  schedule    String?  // "daily", "weekly", "monthly", "quarterly"
+  format      String   @default("pdf") // "pdf", "csv", "json"
+  recipients  Json?    // List of email recipients
+  isActive    Boolean  @default(true)
+  lastRunAt   DateTime?
+  nextRunAt   DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  // Relations
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  executions  ReportExecution[]
+  
+  @@index([userId])
+  @@index([type])
+  @@index([schedule])
+  @@index([isActive])
+}
+
+model ReportExecution {
+  id          String   @id @default(cuid())
+  reportId    String
+  status      String   // "pending", "running", "completed", "failed"
+  filePath    String?  // Path to generated report file
+  fileSize    Int?     // Size of generated file
+  error       String?  // Error message if failed
+  executedAt  DateTime @default(now())
+  completedAt DateTime?
+  metadata    Json?    // Execution metadata
+  
+  // Relations
+  report      Report   @relation(fields: [reportId], references: [id], onDelete: Cascade)
+  
+  @@index([reportId])
+  @@index([status])
+  @@index([executedAt])
+}
+
+// User Activity Tracking
+model UserActivity {
+  id          String   @id @default(cuid())
+  userId      String
+  action      String   // "login", "logout", "create_task", "update_task", "complete_task", "create_team", etc.
+  entityType  String?  // "task", "team", "project", "note", "mail", etc.
+  entityId    String?  // ID of the affected entity
+  metadata    Json?    // Additional activity data
+  ipAddress   String?
+  userAgent   String?
+  createdAt   DateTime @default(now())
+  
+  // Relations
+  user        User     @relation("UserActivities", fields: [userId], references: [id], onDelete: Cascade)
+  
+  @@index([userId])
+  @@index([action])
+  @@index([entityType])
+  @@index([createdAt])
+}
+
+// Performance Metrics
+model PerformanceMetric {
+  id          String   @id @default(cuid())
+  userId      String?
+  teamId      String?
+  projectId   String?
+  taskId      String?
+  metricType  String   // "response_time", "completion_rate", "productivity_score", "efficiency"
+  value       Float
+  unit        String?  // "ms", "percentage", "score", "hours"
+  context     Json?    // Additional context for the metric
+  period      String   @default("daily") // "hourly", "daily", "weekly", "monthly"
+  timestamp   DateTime @default(now())
+  
+  // Relations
+  user        User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+  team        Team?    @relation(fields: [teamId], references: [id], onDelete: SetNull)
+  project     Project? @relation(fields: [projectId], references: [id], onDelete: SetNull)
+  task        Task?    @relation(fields: [taskId], references: [id], onDelete: SetNull)
+  
+  @@index([userId])
+  @@index([teamId])
+  @@index([projectId])
+  @@index([taskId])
+  @@index([metricType, period])
+  @@index([timestamp])
+}
+
 // Legacy models (for backward compatibility)
 model Post {
   id        String   @id @default(cuid())
@@ -359,4 +505,106 @@ model Post {
   authorId  String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+}
+
+// Document Management System
+model Document {
+  id            String   @id @default(cuid())
+  title         String
+  description   String?
+  fileName      String
+  originalName  String
+  fileSize      Int
+  mimeType      String
+  filePath      String
+  status        String   @default("uploading") // "uploading", "processing", "ready", "failed", "archived"
+  visibility    String   @default("private") // "private", "team", "public"
+  userId        String
+  teamId        String?
+  projectId     String?
+  taskId        String?
+  tags          String?  // JSON string array of tags
+  metadata      Json?    // Document metadata extracted by AI
+  extractedText String?  // Text extracted from document
+  embeddings    Json?    // Vector embeddings for semantic search
+  processingLog Json?    // Processing log and errors
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  
+  // Relations
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  team          Team?    @relation(fields: [teamId], references: [id], onDelete: SetNull)
+  project       Project? @relation(fields: [projectId], references: [id], onDelete: SetNull)
+  task          Task?    @relation(fields: [taskId], references: [id], onDelete: SetNull)
+  analyses      DocumentAnalysis[]
+  versions      DocumentVersion[]
+  shares        DocumentShare[]
+  
+  @@index([userId])
+  @@index([teamId])
+  @@index([projectId])
+  @@index([taskId])
+  @@index([status])
+  @@index([visibility])
+  @@index([createdAt])
+  @@index([tags])
+}
+
+model DocumentAnalysis {
+  id          String   @id @default(cuid())
+  documentId  String
+  type        String   // "entity_extraction", "sentiment_analysis", "topic_classification", "summary", "key_phrases", "ocr"
+  analysis    Json     // Analysis results
+  confidence  Float?   // Confidence score for the analysis
+  processingTime Int?  // Time taken for analysis in milliseconds
+  metadata    Json?
+  createdAt   DateTime @default(now())
+  
+  // Relations
+  document    Document @relation(fields: [documentId], references: [id], onDelete: Cascade)
+  
+  @@index([documentId])
+  @@index([type])
+  @@index([createdAt])
+}
+
+model DocumentVersion {
+  id          String   @id @default(cuid())
+  documentId  String
+  version     Int
+  fileName    String
+  originalName String
+  fileSize    Int
+  mimeType    String
+  filePath    String
+  changeLog   String?  // Description of changes
+  createdBy   String   // User ID who created this version
+  createdAt   DateTime @default(now())
+  
+  // Relations
+  document    Document @relation(fields: [documentId], references: [id], onDelete: Cascade)
+  
+  @@index([documentId])
+  @@index([version])
+  @@unique([documentId, version])
+}
+
+model DocumentShare {
+  id          String   @id @default(cuid())
+  documentId  String
+  sharedWith  String   // User ID or email
+  sharedBy    String   // User ID who shared
+  permission  String   @default("view") // "view", "edit", "download"
+  expiresAt   DateTime?
+  message     String?  // Optional message when sharing
+  createdAt   DateTime @default(now())
+  accessedAt  DateTime?
+  
+  // Relations
+  document    Document @relation(fields: [documentId], references: [id], onDelete: Cascade)
+  
+  @@index([documentId])
+  @@index([sharedWith])
+  @@index([permission])
+  @@index([expiresAt])
 }

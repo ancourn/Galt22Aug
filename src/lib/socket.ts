@@ -218,6 +218,81 @@ export const setupSocket = (io: Server) => {
       }
     });
 
+    // Document events
+    socket.on('document:uploaded', (data: { document: any; userId: string; teamId?: string }) => {
+      // Notify document owner and team members
+      io.to(`user:${data.userId}`).emit('document:update', {
+        type: 'uploaded',
+        document: data.document,
+        timestamp: new Date().toISOString(),
+      });
+
+      if (data.teamId) {
+        io.to(`team:${data.teamId}`).emit('document:update', {
+          type: 'uploaded',
+          document: data.document,
+          timestamp: new Date().toISOString(),
+        });
+      }
+    });
+
+    socket.on('document:processed', (data: { documentId: string; userId: string; status: string; message?: string }) => {
+      // Notify document owner
+      io.to(`user:${data.userId}`).emit('document_processed', {
+        documentId: data.documentId,
+        status: data.status,
+        message: data.message,
+        timestamp: new Date().toISOString(),
+      });
+    });
+
+    socket.on('document:shared', (data: { documentId: string; sharedBy: string; sharedWith: string; permission: string; message?: string }) => {
+      // Notify the user who received the share
+      io.to(`user:${data.sharedWith}`).emit('document_shared', {
+        documentId: data.documentId,
+        sharedBy: data.sharedBy,
+        permission: data.permission,
+        message: data.message,
+        timestamp: new Date().toISOString(),
+      });
+    });
+
+    socket.on('document:updated', (data: { documentId: string; updates: any; userId: string; teamId?: string }) => {
+      // Notify document owner and team members
+      io.to(`user:${data.userId}`).emit('document:update', {
+        type: 'updated',
+        documentId: data.documentId,
+        updates: data.updates,
+        timestamp: new Date().toISOString(),
+      });
+
+      if (data.teamId) {
+        io.to(`team:${data.teamId}`).emit('document:update', {
+          type: 'updated',
+          documentId: data.documentId,
+          updates: data.updates,
+          timestamp: new Date().toISOString(),
+        });
+      }
+    });
+
+    socket.on('document:deleted', (data: { documentId: string; userId: string; teamId?: string }) => {
+      // Notify document owner and team members
+      io.to(`user:${data.userId}`).emit('document:update', {
+        type: 'deleted',
+        documentId: data.documentId,
+        timestamp: new Date().toISOString(),
+      });
+
+      if (data.teamId) {
+        io.to(`team:${data.teamId}`).emit('document:update', {
+          type: 'deleted',
+          documentId: data.documentId,
+          timestamp: new Date().toISOString(),
+        });
+      }
+    });
+
     // Handle disconnect
     socket.on('disconnect', () => {
       console.log('Client disconnected:', socket.id);

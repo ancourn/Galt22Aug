@@ -517,3 +517,161 @@ export function useAutomationExecutions(automationId: string, filters?: { status
   const url = `/api/automations/${automationId}/executions${queryString ? `?${queryString}` : ''}`;
   return useApi(url);
 }
+
+// Document management hooks
+export function useDocuments(filters?: { 
+  search?: string; 
+  status?: string; 
+  visibility?: string; 
+  teamId?: string; 
+  projectId?: string; 
+  taskId?: string;
+  page?: number;
+  limit?: number;
+}) {
+  const queryString = new URLSearchParams(filters).toString();
+  const url = `/api/documents${queryString ? `?${queryString}` : ''}`;
+  return useApi(url);
+}
+
+export function useDocument(id: string) {
+  return useApi(`/api/documents/${id}`);
+}
+
+export function useDocumentSearch(query: string, filters?: { 
+  fileType?: string; 
+  dateFrom?: string; 
+  dateTo?: string; 
+  teamId?: string; 
+  projectId?: string; 
+  userId?: string;
+  limit?: number;
+}) {
+  const queryString = new URLSearchParams({ q: query, ...filters }).toString();
+  const url = `/api/documents/search${queryString ? `?${queryString}` : ''}`;
+  return useApi(url, {}, !!query);
+}
+
+export function useUploadDocument() {
+  return async (formData: FormData) => {
+    const response = await fetch('/api/documents', {
+      method: 'POST',
+      body: formData,
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(errorData.error || 'Failed to upload document');
+    }
+
+    return response.json();
+  };
+}
+
+export function useUpdateDocument() {
+  return async (id: string, documentData: {
+    title?: string;
+    description?: string;
+    visibility?: string;
+    tags?: string;
+  }) => {
+    const response = await fetch(`/api/documents/${id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(documentData),
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(errorData.error || 'Failed to update document');
+    }
+
+    return response.json();
+  };
+}
+
+export function useDeleteDocument() {
+  return async (id: string) => {
+    const response = await fetch(`/api/documents/${id}`, {
+      method: 'DELETE',
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(errorData.error || 'Failed to delete document');
+    }
+
+    return response.json();
+  };
+}
+
+export function useShareDocument() {
+  return async (id: string, shareData: {
+    sharedWith: string;
+    permission: 'view' | 'edit' | 'download';
+    message?: string;
+    expiresAt?: string;
+  }) => {
+    const response = await fetch(`/api/documents/${id}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        action: 'share',
+        ...shareData,
+      }),
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(errorData.error || 'Failed to share document');
+    }
+
+    return response.json();
+  };
+}
+
+export function useReprocessDocument() {
+  return async (id: string) => {
+    const response = await fetch(`/api/documents/${id}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        action: 'reprocess',
+      }),
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(errorData.error || 'Failed to reprocess document');
+    }
+
+    return response.json();
+  };
+}
+
+export function useArchiveDocument() {
+  return async (id: string) => {
+    const response = await fetch(`/api/documents/${id}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        action: 'archive',
+      }),
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(errorData.error || 'Failed to archive document');
+    }
+
+    return response.json();
+  };
+}
