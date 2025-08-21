@@ -1,0 +1,179 @@
+
+> nextjs_tailwind_shadcn_ts@0.1.0 dev
+> nodemon --exec "npx tsx server.ts" --watch server.ts --watch src --ext ts,tsx,js,jsx 2>&1 | tee dev.log
+
+[33m[nodemon] 3.1.10[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): server.ts src/**/*[39m
+[33m[nodemon] watching extensions: ts,tsx,js,jsx[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+> Ready on http://0.0.0.0:3000
+> Socket.IO server running at ws://0.0.0.0:3000/api/socketio
+ ○ Compiling / ...
+ ⚠ ./src/components/oxlas/Dashboard.tsx
+Attempted import error: 'useRealTimeProjects' is not exported from '@/hooks/use-api' (imported as 'useRealTimeProjects').
+
+Import trace for requested module:
+./src/components/oxlas/Dashboard.tsx
+./src/app/page.tsx
+
+./src/components/oxlas/Dashboard.tsx
+Attempted import error: 'useRealTimeNotes' is not exported from '@/hooks/use-api' (imported as 'useRealTimeNotes').
+
+Import trace for requested module:
+./src/components/oxlas/Dashboard.tsx
+./src/app/page.tsx
+
+./src/components/oxlas/Dashboard.tsx
+Attempted import error: 'useRealTimeProjects' is not exported from '@/hooks/use-api' (imported as 'useRealTimeProjects').
+
+Import trace for requested module:
+./src/components/oxlas/Dashboard.tsx
+./src/app/page.tsx
+
+./src/components/oxlas/Dashboard.tsx
+Attempted import error: 'useRealTimeNotes' is not exported from '@/hooks/use-api' (imported as 'useRealTimeNotes').
+
+Import trace for requested module:
+./src/components/oxlas/Dashboard.tsx
+./src/app/page.tsx
+
+./src/components/oxlas/Dashboard.tsx
+Attempted import error: 'useRealTimeProjects' is not exported from '@/hooks/use-api' (imported as 'useRealTimeProjects').
+
+Import trace for requested module:
+./src/components/oxlas/Dashboard.tsx
+./src/app/page.tsx
+
+./src/components/oxlas/Dashboard.tsx
+Attempted import error: 'useRealTimeNotes' is not exported from '@/hooks/use-api' (imported as 'useRealTimeNotes').
+
+Import trace for requested module:
+./src/components/oxlas/Dashboard.tsx
+./src/app/page.tsx
+ GET /api/health 200 in 4416ms
+ ⨯ TypeError: (0 , _hooks_use_api__WEBPACK_IMPORTED_MODULE_6__.useRealTimeProjects) is not a function
+    at Dashboard (src/components/oxlas/Dashboard.tsx:31:48)
+  29 |   const { data: projects, loading: projectsLoading } = useProjects();
+  30 |   const { data: notes, loading: notesLoading } = useNotes();
+> 31 |   const { projectUpdates } = useRealTimeProjects();
+     |                                                ^
+  32 |   const { noteUpdates } = useRealTimeNotes();
+  33 |
+  34 |   // Calculate stats from real data {
+  digest: '2535901730'
+}
+ ⨯ TypeError: (0 , _hooks_use_api__WEBPACK_IMPORTED_MODULE_6__.useRealTimeProjects) is not a function
+    at Dashboard (src/components/oxlas/Dashboard.tsx:31:48)
+  29 |   const { data: projects, loading: projectsLoading } = useProjects();
+  30 |   const { data: notes, loading: notesLoading } = useNotes();
+> 31 |   const { projectUpdates } = useRealTimeProjects();
+     |                                                ^
+  32 |   const { noteUpdates } = useRealTimeNotes();
+  33 |
+  34 |   // Calculate stats from real data {
+  digest: '2535901730'
+}
+ GET / 500 in 8994ms
+ GET / 500 in 5721ms
+ ⨯ TypeError: (0 , _hooks_use_api__WEBPACK_IMPORTED_MODULE_6__.useRealTimeProjects) is not a function
+    at Dashboard (src/components/oxlas/Dashboard.tsx:31:48)
+  29 |   const { data: projects, loading: projectsLoading } = useProjects();
+  30 |   const { data: notes, loading: notesLoading } = useNotes();
+> 31 |   const { projectUpdates } = useRealTimeProjects();
+     |                                                ^
+  32 |   const { noteUpdates } = useRealTimeNotes();
+  33 |
+  34 |   // Calculate stats from real data {
+  digest: '2535901730'
+}
+ HEAD / 500 in 100ms
+ ⚠ Cross origin request detected from preview-chat-bb49d12e-c24e-4416-85dd-89a3425d1d8e.space.z.ai to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ ⚠ ./src/components/oxlas/Dashboard.tsx
+Attempted import error: 'useRealTimeProjects' is not exported from '@/hooks/use-api' (imported as 'useRealTimeProjects').
+
+Import trace for requested module:
+./src/components/oxlas/Dashboard.tsx
+./src/app/page.tsx
+
+./src/components/oxlas/Dashboard.tsx
+Attempted import error: 'useRealTimeNotes' is not exported from '@/hooks/use-api' (imported as 'useRealTimeNotes').
+
+Import trace for requested module:
+./src/components/oxlas/Dashboard.tsx
+./src/app/page.tsx
+
+./src/components/oxlas/Dashboard.tsx
+Attempted import error: 'useRealTimeProjects' is not exported from '@/hooks/use-api' (imported as 'useRealTimeProjects').
+
+Import trace for requested module:
+./src/components/oxlas/Dashboard.tsx
+./src/app/page.tsx
+
+./src/components/oxlas/Dashboard.tsx
+Attempted import error: 'useRealTimeNotes' is not exported from '@/hooks/use-api' (imported as 'useRealTimeNotes').
+
+Import trace for requested module:
+./src/components/oxlas/Dashboard.tsx
+./src/app/page.tsx
+
+./src/components/oxlas/Dashboard.tsx
+Attempted import error: 'useRealTimeProjects' is not exported from '@/hooks/use-api' (imported as 'useRealTimeProjects').
+
+Import trace for requested module:
+./src/components/oxlas/Dashboard.tsx
+./src/app/page.tsx
+
+./src/components/oxlas/Dashboard.tsx
+Attempted import error: 'useRealTimeNotes' is not exported from '@/hooks/use-api' (imported as 'useRealTimeNotes').
+
+Import trace for requested module:
+./src/components/oxlas/Dashboard.tsx
+./src/app/page.tsx
+ ⚠ ./src/components/oxlas/Dashboard.tsx
+Attempted import error: 'useRealTimeProjects' is not exported from '@/hooks/use-api' (imported as 'useRealTimeProjects').
+
+Import trace for requested module:
+./src/components/oxlas/Dashboard.tsx
+./src/app/page.tsx
+
+./src/components/oxlas/Dashboard.tsx
+Attempted import error: 'useRealTimeNotes' is not exported from '@/hooks/use-api' (imported as 'useRealTimeNotes').
+
+Import trace for requested module:
+./src/components/oxlas/Dashboard.tsx
+./src/app/page.tsx
+
+./src/components/oxlas/Dashboard.tsx
+Attempted import error: 'useRealTimeProjects' is not exported from '@/hooks/use-api' (imported as 'useRealTimeProjects').
+
+Import trace for requested module:
+./src/components/oxlas/Dashboard.tsx
+./src/app/page.tsx
+
+./src/components/oxlas/Dashboard.tsx
+Attempted import error: 'useRealTimeNotes' is not exported from '@/hooks/use-api' (imported as 'useRealTimeNotes').
+
+Import trace for requested module:
+./src/components/oxlas/Dashboard.tsx
+./src/app/page.tsx
+
+./src/components/oxlas/Dashboard.tsx
+Attempted import error: 'useRealTimeProjects' is not exported from '@/hooks/use-api' (imported as 'useRealTimeProjects').
+
+Import trace for requested module:
+./src/components/oxlas/Dashboard.tsx
+./src/app/page.tsx
+
+./src/components/oxlas/Dashboard.tsx
+Attempted import error: 'useRealTimeNotes' is not exported from '@/hooks/use-api' (imported as 'useRealTimeNotes').
+
+Import trace for requested module:
+./src/components/oxlas/Dashboard.tsx
+./src/app/page.tsx
+ GET /avatars/user.png 404 in 567ms
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m

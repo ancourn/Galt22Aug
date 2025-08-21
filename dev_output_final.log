@@ -1,0 +1,35 @@
+
+> nextjs_tailwind_shadcn_ts@0.1.0 dev
+> nodemon --exec "npx tsx server.ts" --watch server.ts --watch src --ext ts,tsx,js,jsx 2>&1 | tee dev.log
+
+[33m[nodemon] 3.1.10[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): server.ts src/**/*[39m
+[33m[nodemon] watching extensions: ts,tsx,js,jsx[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+> Ready on http://0.0.0.0:3000
+> Socket.IO server running at ws://0.0.0.0:3000/api/socketio
+ ○ Compiling / ...
+ ✓ Compiled / in 9s (1321 modules)
+ GET /api/health 200 in 9289ms
+ GET / 200 in 7528ms
+ GET / 200 in 166ms
+ ○ Compiling /projects ...
+ ⚠ ./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+ ⨯ [Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.] {
+  digest: '221310517'
+}
+ GET /projects 500 in 1210ms
+ GET / 200 in 222ms
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m

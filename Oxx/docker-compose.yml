@@ -1,0 +1,247 @@
+version: '3.8'
+
+services:
+  # Database
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_DB: oxlas
+      POSTGRES_USER: oxlas
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - oxlas-backend
+
+  # Cache
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    networks:
+      - oxlas-backend
+
+  # 🤖 Oxlas AI (Ollama)
+  ollama:
+    image: ollama/ollama:latest
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_/root/.ollama
+    command: sh -c "ollama pull llama3 && ollama serve"
+    networks:
+      - oxlas-backend
+
+  # 📋 Oxlas Projects (Planka)
+  planka:
+    image: planka/planka:latest
+    ports:
+      - "10240:10240"
+    environment:
+      - APP_PORT=10240
+      - DB_CLIENT=pg
+      - DATABASE_URL=postgresql://oxlas:${POSTGRES_PASSWORD}@postgres:5432/oxlas_planka
+      - APP_CRYPTO_KEY=${APP_CRYPTO_KEY}
+      - APP_JWT_SECRET=${APP_JWT_SECRET}
+    networks:
+      - oxlas-backend
+    depends_on:
+      - postgres
+
+  # 💬 Oxlas Care (Zammad)
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.11.3
+    environment:
+      - discovery.type=single-node
+      - ES_JAVA_OPTS=-Xms1g -Xmx1g
+    volumes:
+      - elasticsearch_data:/usr/share/elasticsearch/data
+    networks:
+      - oxlas-backend
+  zammad:
+    image: zammad/zammad
+    ports:
+      - "20240:20240"
+    environment:
+      - ZAMMAD_RAILSSERVER_PORT=20240
+      - DATABASE_HOST=postgres
+      - ELASTICSEARCH_HOST=elasticsearch
+      - REDIS_HOST=redis
+    networks:
+      - oxlas-backend
+    depends_on:
+      - postgres
+      - elasticsearch
+
+  # 📚 Oxlas Wiki (Outline)
+  outline:
+    image: outline/outline:latest
+    ports:
+      - "3002:3002"
+    environment:
+      - DATABASE_URL=postgresql://oxlas:${POSTGRES_PASSWORD}@postgres:5432/oxlas_outline
+      - REDIS_URL=redis://redis:6379
+      - URL=http://localhost:3002
+    networks:
+      - oxlas-backend
+    depends_on:
+      - postgres
+      - redis
+
+  # 💬 Oxlas Chat (Matrix + Element)
+  matrix-synapse:
+    image: matrixdotorg/synapse:latest
+    ports:
+      - "8008:8008"
+    environment:
+      - SYNAPSE_SERVER_NAME=oxlas.com
+      - SYNAPSE_REPORT_STATS=yes
+    volumes:
+      - ./matrix-/data
+    networks:
+      - oxlas-backend
+  element-web:
+    image: vectorim/element-web
+    ports:
+      - "8081:80"
+    networks:
+      - oxlas-backend
+    depends_on:
+      - matrix-synapse
+
+  # 📝 Oxlas Forms (Formbricks)
+  formbricks:
+    image: formbricks/formbricks:latest
+    ports:
+      - "3003:3003"
+    environment:
+      - DATABASE_URL=postgresql://oxlas:${POSTGRES_PASSWORD}@postgres:5432/oxlas_forms
+      - NEXTAUTH_URL=http://localhost:3003
+    networks:
+      - oxlas-backend
+    depends_on:
+      - postgres
+
+  # 📓 Oxlas Notes (Joplin)
+  joplin:
+    image: joplin/server:latest
+    ports:
+      - "22300:22300"
+    environment:
+      - APP_PORT=22300
+      - POSTGRES_DATABASE=oxlas_joplin
+      - POSTGRES_USER=oxlas
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    networks:
+      - oxlas-backend
+    depends_on:
+      - postgres
+
+  # 🔐 Oxlas SSO (Authelia)
+  authelia:
+    image: authelia/authelia:latest
+    container_name: oxlas-authelia
+    ports:
+      - "9091:9091"
+    volumes:
+      - ./config/authelia:/config
+    networks:
+      - oxlas-backend
+    depends_on:
+      - redis
+      - postgres
+
+  # 🔍 Oxlas Search (Meilisearch)
+  meilisearch:
+    image: getmeili/meilisearch:v1
+    container_name: oxlas-meilisearch
+    volumes:
+      - meilisearch_data:/data.ms
+    environment:
+      - MEILI_MASTER_KEY=${MEILISEARCH_MASTER_KEY}
+    ports:
+      - "7700:7700"
+    networks:
+      - oxlas-backend
+
+  # ⚡ Oxlas Flow (Automation Engine)
+  oxlas-flow:
+    build: ./services/flow
+    container_name: oxlas-flow-engine
+    ports:
+      - "3005:3000"
+    environment:
+      - DATABASE_URL=postgresql://oxlas:${POSTGRES_PASSWORD}@postgres:5432/oxlas_flow
+      - REDIS_URL=redis://redis:6379
+      - MEILISEARCH_URL=http://meilisearch:7700
+      - MEILISEARCH_MASTER_KEY=${MEILISEARCH_MASTER_KEY}
+    networks:
+      - oxlas-backend
+    depends_on:
+      - postgres
+      - redis
+      - meilisearch
+
+  # 🧠 Oxlas Brain (Knowledge Graph)
+  oxlas-brain:
+    build: ./services/brain
+    container_name: oxlas-brain-engine
+    ports:
+      - "3006:3001"
+    environment:
+      - DATABASE_URL=postgresql://oxlas:${POSTGRES_PASSWORD}@postgres:5432/oxlas
+      - REDIS_URL=redis://redis:6379
+    networks:
+      - oxlas-backend
+    depends_on:
+      - postgres
+      - redis
+
+  # 📊 Oxlas Monitoring (Prometheus)
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: oxlas-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./config/prometheus:/etc/prometheus
+      - prometheus_data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/etc/prometheus/console_libraries'
+      - '--web.console.templates=/etc/prometheus/consoles'
+      - '--storage.tsdb.retention.time=200h'
+      - '--web.enable-lifecycle'
+    networks:
+      - oxlas-backend
+
+  # 📈 Oxlas Dashboard (Grafana)
+  grafana:
+    image: grafana/grafana:latest
+    container_name: oxlas-grafana
+    ports:
+      - "3001:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_PASSWORD}
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./config/grafana:/etc/grafana/provisioning
+    networks:
+      - oxlas-backend
+    depends_on:
+      - prometheus
+
+volumes:
+  postgres_data:
+  elasticsearch_data:
+  ollama_:
+  meilisearch_data:
+  prometheus_data:
+  grafana_data:
+
+networks:
+  oxlas-backend:
+    driver: bridge

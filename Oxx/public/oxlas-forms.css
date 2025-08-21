@@ -1,0 +1,4 @@
+/* Oxlas Forms - Hide Formbricks branding */
+footer, .brand, .powered-by { display: none !important; }
+.header-logo::before { content: "Oxlas Forms" !important; }
+.navbar-brand::before { content: "Oxlas Forms" !important; }

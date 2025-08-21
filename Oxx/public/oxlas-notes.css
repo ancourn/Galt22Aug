@@ -1,0 +1,4 @@
+/* Oxlas Notes - Hide Joplin branding */
+footer, .brand, .powered-by { display: none !important; }
+.header-logo::before { content: "Oxlas Notes" !important; }
+.app-title::before { content: "Oxlas Notes" !important; }

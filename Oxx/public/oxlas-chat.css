@@ -1,0 +1,4 @@
+/* Oxlas Chat - Hide Element branding */
+footer, .brand, .powered-by, .mx_AuthFooter { display: none !important; }
+.mx_HomePage_header_logo::before { content: "Oxlas Chat" !important; }
+.mx_Logo_base::before { content: "Oxlas Chat" !important; }

@@ -1,0 +1,6 @@
+/* Oxlas Care - Hide Zammad branding */
+footer em, .pull-right, .brand, .logo-text { display: none !important; }
+#header-title::before { content: "Oxlas Care" !important; }
+.navbar-brand::before { content: "Oxlas Care" !important; }
+.powered-by { display: none !important; }
+.version-info { display: none !important; }

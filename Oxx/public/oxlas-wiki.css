@@ -1,0 +1,5 @@
+/* Oxlas Wiki - Hide Outline branding */
+.footer, .brand, .logo-text { display: none !important; }
+.header-logo::before { content: "Oxlas Wiki" !important; }
+.navbar-brand::before { content: "Oxlas Wiki" !important; }
+.powered-by { display: none !important; }

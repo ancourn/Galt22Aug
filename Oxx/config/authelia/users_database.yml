@@ -1,0 +1,30 @@
+# Oxlas Users Database
+# https://www.authelia.com/configuration/authentication/file/
+
+users:
+  # Admin user
+  admin:
+    disabled: false
+    displayname: "Oxlas Administrator"
+    password: "$argon2id$v=19$m=65536,t=1,p=2$c2FsdHNhbHQ$R3VJcmVWbGpQZ1JjT3JyQkRqQ3dVQ3FwQzRQY1ZkV0" # Change this in production
+    email: admin@oxlas.com
+    groups:
+      - oxlas_users
+      - oxlas_admins
+
+  # Regular users
+  john:
+    disabled: false
+    displayname: "John Doe"
+    password: "$argon2id$v=19$m=65536,t=1,p=2$c2FsdHNhbHQ$R3VJcmVWbGpQZ1JjT3JyQkRqQ3dVQ3FwQzRQY1ZkV0" # Change this in production
+    email: john@oxlas.com
+    groups:
+      - oxlas_users
+
+  jane:
+    disabled: false
+    displayname: "Jane Smith"
+    password: "$argon2id$v=19$m=65536,t=1,p=2$c2FsdHNhbHQ$R3VJcmVWbGpQZ1JjT3JyQkRqQ3dVQ3FwQzRQY1ZkV0" # Change this in production
+    email: jane@oxlas.com
+    groups:
+      - oxlas_users

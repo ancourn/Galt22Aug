@@ -1,0 +1,4 @@
+/* Oxlas Projects - Hide Planka branding */
+.footer, .brand-logo, .powered-by { display: none !important; }
+.header-logo::before { content: "Oxlas Projects" !important; }
+.app-title::before { content: "Oxlas Projects" !important; }

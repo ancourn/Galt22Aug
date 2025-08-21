@@ -1,0 +1,1819 @@
+
+> nextjs_tailwind_shadcn_ts@0.1.0 dev
+> nodemon --exec "npx tsx server.ts" --watch server.ts --watch src --ext ts,tsx,js,jsx 2>&1 | tee dev.log
+
+[33m[nodemon] 3.1.10[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): server.ts src/**/*[39m
+[33m[nodemon] watching extensions: ts,tsx,js,jsx[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+> Ready on http://0.0.0.0:3000
+> Socket.IO server running at ws://0.0.0.0:3000/api/socketio
+ ○ Compiling / ...
+ ✓ Compiled / in 7.6s (1302 modules)
+ GET / 200 in 8020ms
+ GET / 200 in 6965ms
+ GET / 200 in 5653ms
+ GET / 200 in 2962ms
+ GET / 200 in 4875ms
+ GET / 200 in 9093ms
+ GET / 200 in 172ms
+ ○ Compiling /api/health ...
+ ✓ Compiled /api/health in 1493ms (1289 modules)
+ GET /api/health 200 in 1627ms
+ GET / 200 in 986ms
+ HEAD / 200 in 139ms
+ ⚠ Cross origin request detected from preview-chat-bb49d12e-c24e-4416-85dd-89a3425d1d8e.space.z.ai to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ ○ Compiling /api/auth/[...nextauth] ...
+ ✓ Compiled /api/auth/[...nextauth] in 1150ms (1517 modules)
+ GET /api/auth/session 200 in 2289ms
+ GET / 200 in 327ms
+ GET /api/auth/session 200 in 19ms
+ GET / 200 in 142ms
+ ✓ Compiled /inbox in 416ms (1534 modules)
+ GET /inbox 200 in 711ms
+ ○ Compiling /projects ...
+ ⚠ ./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+ ⨯ [Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.] {
+  digest: '2219234686'
+}
+ GET /projects 500 in 1390ms
+ ⚠ ./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+ ⚠ ./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+ GET /drive 200 in 1199ms
+ ⚠ ./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+ ⚠ ./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+ GET /docs 200 in 743ms
+ ⚠ ./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+ ⚠ ./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+ GET /team 200 in 713ms
+ ⚠ ./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+ ⚠ ./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+ GET /meet 200 in 678ms
+ ⚠ ./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+ ⚠ ./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+ GET /brain 200 in 713ms
+ ⚠ ./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+ ⚠ ./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+ GET /ai 200 in 617ms
+ ⚠ ./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+ ⚠ ./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+ GET /notes 200 in 714ms
+ ⚠ ./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+ ⚠ ./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+ GET /calendar 200 in 776ms
+ ⚠ ./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+ ⚠ ./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/care/page.tsx
+Attempted import error: 'Chat' is not exported from '__barrel_optimize__?names=AlertTriangle,Calendar,Chat,CheckCircle,Clock,FileText,Headset,Mail,MoreVertical,Phone,Plus,Search,Star,Ticket,Users!=!lucide-react' (imported as 'Chat').
+
+Import trace for requested module:
+./src/app/care/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/care/page.tsx
+Attempted import error: 'Chat' is not exported from '__barrel_optimize__?names=AlertTriangle,Calendar,Chat,CheckCircle,Clock,FileText,Headset,Mail,MoreVertical,Phone,Plus,Search,Star,Ticket,Users!=!lucide-react' (imported as 'Chat').
+
+Import trace for requested module:
+./src/app/care/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+ ⨯ [Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.] {
+  digest: '1259355853'
+}
+ GET /care 500 in 1142ms
+ ⚠ ./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/pa[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+ ⨯ uncaughtException: Error: listen EADDRINUSE: address already in use 0.0.0.0:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use 0.0.0.0:3000) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '0.0.0.0',
+  port: 3000
+}
+ ⨯ uncaughtException:  Error: listen EADDRINUSE: address already in use 0.0.0.0:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use 0.0.0.0:3000) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '0.0.0.0',
+  port: 3000
+}
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/home/z/my-project/.next/cache/webpack/client-development/0.pack.gz_' -> '/home/z/my-project/.next/cache/webpack/client-development/0.pack.gz'
+orted from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/care/page.tsx
+Attempted import error: 'Chat' is not exported from '__barrel_optimize__?names=AlertTriangle,Calendar,Chat,CheckCircle,Clock,FileText,Headset,Mail,MoreVertical,Phone,Plus,Search,Star,Ticket,Users!=!lucide-react' (imported as 'Chat').
+
+Import trace for requested module:
+./src/app/care/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+ ⚠ ./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/care/page.tsx
+Attempted import error: 'Chat' is not exported from '__barrel_optimize__?names=AlertTriangle,Calendar,Chat,CheckCircle,Clock,FileText,Headset,Mail,MoreVertical,Phone,Plus,Search,Star,Ticket,Users!=!lucide-react' (imported as 'Chat').
+
+Import trace for requested module:
+./src/app/care/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/care/page.tsx
+Attempted import error: 'Chat' is not exported from '__barrel_optimize__?names=AlertTriangle,Calendar,Chat,CheckCircle,Clock,FileText,Headset,Mail,MoreVertical,Phone,Plus,Search,Star,Ticket,Users!=!lucide-react' (imported as 'Chat').
+
+Import trace for requested module:
+./src/app/care/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+ GET /flow 200 in 944ms
+ ⚠ ./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/care/page.tsx
+Attempted import error: 'Chat' is not exported from '__barrel_optimize__?names=AlertTriangle,Calendar,Chat,CheckCircle,Clock,FileText,Headset,Mail,MoreVertical,Phone,Plus,Search,Star,Ticket,Users!=!lucide-react' (imported as 'Chat').
+
+Import trace for requested module:
+./src/app/care/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/care/page.tsx
+Attempted import error: 'Chat' is not exported from '__barrel_optimize__?names=AlertTriangle,Calendar,Chat,CheckCircle,Clock,FileText,Headset,Mail,MoreVertical,Phone,Plus,Search,Star,Ticket,Users!=!lucide-react' (imported as 'Chat').
+
+Import trace for requested module:
+./src/app/care/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+ ⚠ ./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/care/page.tsx
+Attempted import error: 'Chat' is not exported from '__barrel_optimize__?names=AlertTriangle,Calendar,Chat,CheckCircle,Clock,FileText,Headset,Mail,MoreVertical,Phone,Plus,Search,Star,Ticket,Users!=!lucide-react' (imported as 'Chat').
+
+Import trace for requested module:
+./src/app/care/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/care/page.tsx
+Attempted import error: 'Chat' is not exported from '__barrel_optimize__?names=AlertTriangle,Calendar,Chat,CheckCircle,Clock,FileText,Headset,Mail,MoreVertical,Phone,Plus,Search,Star,Ticket,Users!=!lucide-react' (imported as 'Chat').
+
+Import trace for requested module:
+./src/app/care/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+ GET /wiki 200 in 783ms
+ ⚠ ./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/care/page.tsx
+Attempted import error: 'Chat' is not exported from '__barrel_optimize__?names=AlertTriangle,Calendar,Chat,CheckCircle,Clock,FileText,Headset,Mail,MoreVertical,Phone,Plus,Search,Star,Ticket,Users!=!lucide-react' (imported as 'Chat').
+
+Import trace for requested module:
+./src/app/care/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/care/page.tsx
+Attempted import error: 'Chat' is not exported from '__barrel_optimize__?names=AlertTriangle,Calendar,Chat,CheckCircle,Clock,FileText,Headset,Mail,MoreVertical,Phone,Plus,Search,Star,Ticket,Users!=!lucide-react' (imported as 'Chat').
+
+Import trace for requested module:
+./src/app/care/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+ ⚠ ./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/care/page.tsx
+Attempted import error: 'Chat' is not exported from '__barrel_optimize__?names=AlertTriangle,Calendar,Chat,CheckCircle,Clock,FileText,Headset,Mail,MoreVertical,Phone,Plus,Search,Star,Ticket,Users!=!lucide-react' (imported as 'Chat').
+
+Import trace for requested module:
+./src/app/care/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/care/page.tsx
+Attempted import error: 'Chat' is not exported from '__barrel_optimize__?names=AlertTriangle,Calendar,Chat,CheckCircle,Clock,FileText,Headset,Mail,MoreVertical,Phone,Plus,Search,Star,Ticket,Users!=!lucide-react' (imported as 'Chat').
+
+Import trace for requested module:
+./src/app/care/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+ GET /chat 200 in 1119ms
+ ⚠ ./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/care/page.tsx
+Attempted import error: 'Chat' is not exported from '__barrel_optimize__?names=AlertTriangle,Calendar,Chat,CheckCircle,Clock,FileText,Headset,Mail,MoreVertical,Phone,Plus,Search,Star,Ticket,Users!=!lucide-react' (imported as 'Chat').
+
+Import trace for requested module:
+./src/app/care/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/care/page.tsx
+Attempted import error: 'Chat' is not exported from '__barrel_optimize__?names=AlertTriangle,Calendar,Chat,CheckCircle,Clock,FileText,Headset,Mail,MoreVertical,Phone,Plus,Search,Star,Ticket,Users!=!lucide-react' (imported as 'Chat').
+
+Import trace for requested module:
+./src/app/care/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+ ⚠ ./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/care/page.tsx
+Attempted import error: 'Chat' is not exported from '__barrel_optimize__?names=AlertTriangle,Calendar,Chat,CheckCircle,Clock,FileText,Headset,Mail,MoreVertical,Phone,Plus,Search,Star,Ticket,Users!=!lucide-react' (imported as 'Chat').
+
+Import trace for requested module:
+./src/app/care/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/care/page.tsx
+Attempted import error: 'Chat' is not exported from '__barrel_optimize__?names=AlertTriangle,Calendar,Chat,CheckCircle,Clock,FileText,Headset,Mail,MoreVertical,Phone,Plus,Search,Star,Ticket,Users!=!lucide-react' (imported as 'Chat').
+
+Import trace for requested module:
+./src/app/care/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+ GET /forms 200 in 998ms
+ ⚠ ./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/care/page.tsx
+Attempted import error: 'Chat' is not exported from '__barrel_optimize__?names=AlertTriangle,Calendar,Chat,CheckCircle,Clock,FileText,Headset,Mail,MoreVertical,Phone,Plus,Search,Star,Ticket,Users!=!lucide-react' (imported as 'Chat').
+
+Import trace for requested module:
+./src/app/care/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/care/page.tsx
+Attempted import error: 'Chat' is not exported from '__barrel_optimize__?names=AlertTriangle,Calendar,Chat,CheckCircle,Clock,FileText,Headset,Mail,MoreVertical,Phone,Plus,Search,Star,Ticket,Users!=!lucide-react' (imported as 'Chat').
+
+Import trace for requested module:
+./src/app/care/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+ ⚠ ./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/care/page.tsx
+Attempted import error: 'Chat' is not exported from '__barrel_optimize__?names=AlertTriangle,Calendar,Chat,CheckCircle,Clock,FileText,Headset,Mail,MoreVertical,Phone,Plus,Search,Star,Ticket,Users!=!lucide-react' (imported as 'Chat').
+
+Import trace for requested module:
+./src/app/care/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/care/page.tsx
+Attempted import error: 'Chat' is not exported from '__barrel_optimize__?names=AlertTriangle,Calendar,Chat,CheckCircle,Clock,FileText,Headset,Mail,MoreVertical,Phone,Plus,Search,Star,Ticket,Users!=!lucide-react' (imported as 'Chat').
+
+Import trace for requested module:
+./src/app/care/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+ GET /dashboard 200 in 828ms
+ GET /api/health 200 in 17ms
+ ⚠ ./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/care/page.tsx
+Attempted import error: 'Chat' is not exported from '__barrel_optimize__?names=AlertTriangle,Calendar,Chat,CheckCircle,Clock,FileText,Headset,Mail,MoreVertical,Phone,Plus,Search,Star,Ticket,Users!=!lucide-react' (imported as 'Chat').
+
+Import trace for requested module:
+./src/app/care/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/care/page.tsx
+Attempted import error: 'Chat' is not exported from '__barrel_optimize__?names=AlertTriangle,Calendar,Chat,CheckCircle,Clock,FileText,Headset,Mail,MoreVertical,Phone,Plus,Search,Star,Ticket,Users!=!lucide-react' (imported as 'Chat').
+
+Import trace for requested module:
+./src/app/care/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+ ⚠ ./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/care/page.tsx
+Attempted import error: 'Chat' is not exported from '__barrel_optimize__?names=AlertTriangle,Calendar,Chat,CheckCircle,Clock,FileText,Headset,Mail,MoreVertical,Phone,Plus,Search,Star,Ticket,Users!=!lucide-react' (imported as 'Chat').
+
+Import trace for requested module:
+./src/app/care/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/care/page.tsx
+Attempted import error: 'Chat' is not exported from '__barrel_optimize__?names=AlertTriangle,Calendar,Chat,CheckCircle,Clock,FileText,Headset,Mail,MoreVertical,Phone,Plus,Search,Star,Ticket,Users!=!lucide-react' (imported as 'Chat').
+
+Import trace for requested module:
+./src/app/care/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+ GET /api/projects 401 in 711ms
+ ⚠ ./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/care/page.tsx
+Attempted import error: 'Chat' is not exported from '__barrel_optimize__?names=AlertTriangle,Calendar,Chat,CheckCircle,Clock,FileText,Headset,Mail,MoreVertical,Phone,Plus,Search,Star,Ticket,Users!=!lucide-react' (imported as 'Chat').
+
+Import trace for requested module:
+./src/app/care/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/care/page.tsx
+Attempted import error: 'Chat' is not exported from '__barrel_optimize__?names=AlertTriangle,Calendar,Chat,CheckCircle,Clock,FileText,Headset,Mail,MoreVertical,Phone,Plus,Search,Star,Ticket,Users!=!lucide-react' (imported as 'Chat').
+
+Import trace for requested module:
+./src/app/care/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+ ⚠ ./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/care/page.tsx
+Attempted import error: 'Chat' is not exported from '__barrel_optimize__?names=AlertTriangle,Calendar,Chat,CheckCircle,Clock,FileText,Headset,Mail,MoreVertical,Phone,Plus,Search,Star,Ticket,Users!=!lucide-react' (imported as 'Chat').
+
+Import trace for requested module:
+./src/app/care/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/care/page.tsx
+Attempted import error: 'Chat' is not exported from '__barrel_optimize__?names=AlertTriangle,Calendar,Chat,CheckCircle,Clock,FileText,Headset,Mail,MoreVertical,Phone,Plus,Search,Star,Ticket,Users!=!lucide-react' (imported as 'Chat').
+
+Import trace for requested module:
+./src/app/care/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+ GET /api/notes 401 in 641ms
+ ⚠ ./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/care/page.tsx
+Attempted import error: 'Chat' is not exported from '__barrel_optimize__?names=AlertTriangle,Calendar,Chat,CheckCircle,Clock,FileText,Headset,Mail,MoreVertical,Phone,Plus,Search,Star,Ticket,Users!=!lucide-react' (imported as 'Chat').
+
+Import trace for requested module:
+./src/app/care/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/care/page.tsx
+Attempted import error: 'Chat' is not exported from '__barrel_optimize__?names=AlertTriangle,Calendar,Chat,CheckCircle,Clock,FileText,Headset,Mail,MoreVertical,Phone,Plus,Search,Star,Ticket,Users!=!lucide-react' (imported as 'Chat').
+
+Import trace for requested module:
+./src/app/care/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+ ⚠ ./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/care/page.tsx
+Attempted import error: 'Chat' is not exported from '__barrel_optimize__?names=AlertTriangle,Calendar,Chat,CheckCircle,Clock,FileText,Headset,Mail,MoreVertical,Phone,Plus,Search,Star,Ticket,Users!=!lucide-react' (imported as 'Chat').
+
+Import trace for requested module:
+./src/app/care/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/care/page.tsx
+Attempted import error: 'Chat' is not exported from '__barrel_optimize__?names=AlertTriangle,Calendar,Chat,CheckCircle,Clock,FileText,Headset,Mail,MoreVertical,Phone,Plus,Search,Star,Ticket,Users!=!lucide-react' (imported as 'Chat').
+
+Import trace for requested module:
+./src/app/care/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+ GET /api/ai 405 in 637ms
+ ⚠ ./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/care/page.tsx
+Attempted import error: 'Chat' is not exported from '__barrel_optimize__?names=AlertTriangle,Calendar,Chat,CheckCircle,Clock,FileText,Headset,Mail,MoreVertical,Phone,Plus,Search,Star,Ticket,Users!=!lucide-react' (imported as 'Chat').
+
+Import trace for requested module:
+./src/app/care/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/care/page.tsx
+Attempted import error: 'Chat' is not exported from '__barrel_optimize__?names=AlertTriangle,Calendar,Chat,CheckCircle,Clock,FileText,Headset,Mail,MoreVertical,Phone,Plus,Search,Star,Ticket,Users!=!lucide-react' (imported as 'Chat').
+
+Import trace for requested module:
+./src/app/care/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+ ⚠ ./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/care/page.tsx
+Attempted import error: 'Chat' is not exported from '__barrel_optimize__?names=AlertTriangle,Calendar,Chat,CheckCircle,Clock,FileText,Headset,Mail,MoreVertical,Phone,Plus,Search,Star,Ticket,Users!=!lucide-react' (imported as 'Chat').
+
+Import trace for requested module:
+./src/app/care/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/care/page.tsx
+Attempted import error: 'Chat' is not exported from '__barrel_optimize__?names=AlertTriangle,Calendar,Chat,CheckCircle,Clock,FileText,Headset,Mail,MoreVertical,Phone,Plus,Search,Star,Ticket,Users!=!lucide-react' (imported as 'Chat').
+
+Import trace for requested module:
+./src/app/care/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+ GET /api/search 401 in 646ms
+ ⚠ ./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/care/page.tsx
+Attempted import error: 'Chat' is not exported from '__barrel_optimize__?names=AlertTriangle,Calendar,Chat,CheckCircle,Clock,FileText,Headset,Mail,MoreVertical,Phone,Plus,Search,Star,Ticket,Users!=!lucide-react' (imported as 'Chat').
+
+Import trace for requested module:
+./src/app/care/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/care/page.tsx
+Attempted import error: 'Chat' is not exported from '__barrel_optimize__?names=AlertTriangle,Calendar,Chat,CheckCircle,Clock,FileText,Headset,Mail,MoreVertical,Phone,Plus,Search,Star,Ticket,Users!=!lucide-react' (imported as 'Chat').
+
+Import trace for requested module:
+./src/app/care/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+ ⚠ ./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/care/page.tsx
+Attempted import error: 'Chat' is not exported from '__barrel_optimize__?names=AlertTriangle,Calendar,Chat,CheckCircle,Clock,FileText,Headset,Mail,MoreVertical,Phone,Plus,Search,Star,Ticket,Users!=!lucide-react' (imported as 'Chat').
+
+Import trace for requested module:
+./src/app/care/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Project' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Project').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Form' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'FormIcon').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/brain/page.tsx
+Attempted import error: 'Note' is not exported from '__barrel_optimize__?names=BookOpen,Clock,FileText,Form,Link,MessageSquare,Network,Note,Project,RefreshCw,Search,Ticket,TrendingUp!=!lucide-react' (imported as 'Note').
+
+Import trace for requested module:
+./src/app/brain/page.tsx
+
+./src/app/care/page.tsx
+Attempted import error: 'Chat' is not exported from '__barrel_optimize__?names=AlertTriangle,Calendar,Chat,CheckCircle,Clock,FileText,Headset,Mail,MoreVertical,Phone,Plus,Search,Star,Ticket,Users!=!lucide-react' (imported as 'Chat').
+
+Import trace for requested module:
+./src/app/care/page.tsx
+
+./src/app/projects/page.tsx
+Attempted import error: 'Task' is not exported from '__barrel_optimize__?names=Calendar,FileText,Filter,MoreVertical,Plus,Search,Star,Task,Users!=!lucide-react' (imported as 'Task').
+
+Import trace for requested module:
+./src/app/projects/page.tsx
+ GET /auth/signin 200 in 928ms
+ ⨯ [Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.] {
+  digest: '2219234686'
+}
+ GET /projects 500 in 450ms
+ GET / 200 in 185ms
+ GET / 200 in 136ms
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+ ⨯ uncaughtException: Error: listen EADDRINUSE: address already in use 0.0.0.0:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use 0.0.0.0:3000) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '0.0.0.0',
+  port: 3000
+}
+ ⨯ uncaughtException:  Error: listen EADDRINUSE: address already in use 0.0.0.0:3000
+    at <unknown> (Error: listen EADDRINUSE: address already in use 0.0.0.0:3000) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '0.0.0.0',
+  port: 3000
+}
