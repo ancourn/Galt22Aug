@@ -15,7 +15,6 @@ import {
   MoreVertical, 
   Calendar, 
   Users, 
-  Task, 
   MessageSquare,
   FileText,
   Star,
@@ -25,8 +24,7 @@ import {
   AlertTriangle,
   CheckCircle,
   Phone,
-  Mail,
-  Chat
+  Mail
 } from 'lucide-react';
 
 export default function CarePage() {
@@ -327,7 +325,7 @@ export default function CarePage() {
                               <Mail className="h-3 w-3" />
                             </Button>
                             <Button variant="ghost" size="icon" className="h-8 w-8">
-                              <Chat className="h-3 w-3" />
+                              <MessageSquare className="h-3 w-3" />
                             </Button>
                             <Button variant="ghost" size="icon" className="h-8 w-8">
                               <MoreVertical className="h-3 w-3" />

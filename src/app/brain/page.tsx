@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Search, Network, RefreshCw, FileText, MessageSquare, Project, Ticket, BookOpen, Form as FormIcon, Note, Link, Clock, TrendingUp } from 'lucide-react';
+import { Search, Network, RefreshCw, FileText, MessageSquare, Ticket, BookOpen, Square, File, Link, Clock, TrendingUp, FolderOpen } from 'lucide-react';
 import Header from '@/components/oxlas/Header';
 import Sidebar from '@/components/oxlas/Sidebar';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -148,12 +148,12 @@ export default function BrainPage() {
 
   const getModuleIcon = (moduleId: string) => {
     switch (moduleId) {
-      case 'projects': return Project;
+      case 'projects': return FolderOpen;
       case 'care': return Ticket;
       case 'wiki': return BookOpen;
       case 'chat': return MessageSquare;
-      case 'forms': return FormIcon;
-      case 'notes': return Note;
+      case 'forms': return Square;
+      case 'notes': return File;
       default: return FileText;
     }
   };
